@@ -25,7 +25,7 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className="app" data-testid="app">
       <Header location={location} onChange={handleInputChange} onClick={handleSearch} />
       <section>
         {data === undefined ? (
