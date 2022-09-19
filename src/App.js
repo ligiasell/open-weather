@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
+import Header from './components/header'
+
 import './App.css'
 
 const API_KEY = process.env.REACT_APP_API_KEY
@@ -24,15 +26,10 @@ function App() {
 
   return (
     <div className="app">
-      <header className="app-header">
-        <input className="app-input" type="text" value={location} placeholder="Enter location" onChange={handleInputChange} />
-        <button className="app-button" type="button" onClick={handleSearch} disabled={!location}>
-          Search
-        </button>
-      </header>
-      <div>
+      <Header location={location} onChange={handleInputChange} onClick={handleSearch} />
+      <section>
         {data === undefined ? (
-          <p className="app-text-big center">Search for a location</p>
+          <h1 className="app-text-big center">Search for a location</h1>
         ) : (
           <div className="app-container">
             <h1 className="app-title-name center">{data?.name}</h1>
@@ -44,10 +41,10 @@ function App() {
             <h3 className="app-title-feels app-text-small">Thermal sensation</h3>
             <p className="app-feels app-text-medium">{data?.main?.feels_like} K</p>
             <h3 className="app-title-hum app-text-small">Humidity</h3>
-            <p className="app-hum app-text-medium">{data?.main?.humidity} K</p>
+            <p className="app-hum app-text-medium">{data?.main?.humidity}%</p>
           </div>
         )}
-      </div>
+      </section>
       <footer className="app-footer center">Powered with Open Weather</footer>
     </div>
   )

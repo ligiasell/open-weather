@@ -10,3 +10,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.visually-hidden {
+  display: none;
+  height: 0.1rem;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 0.1rem;
+}

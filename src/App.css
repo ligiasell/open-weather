@@ -17,38 +17,6 @@
   z-index: -1;
 }
 
-.app-header {
-  display: flex;
-  justify-content: center;
-  padding: 4rem;
-}
-
-.app-input,
-.app-button {
-  padding: 0.4rem 0.8rem;
-  border-radius: 2rem;
-  border: 0.1rem solid lightgray;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  font-size: 1.2rem;
-}
-
-.app-button {
-  background: rgba(255, 255, 255, 0.8);
-  color: gray;
-  margin-left: 2rem;
-}
-
-.app-button:hover {
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-::placeholder {
-  color: white;
-  font-size: 1.2rem;
-}
-
 .app-container {
   display: grid;
   grid-template-columns: auto auto;
@@ -133,4 +101,5 @@
 .center {
   display: flex;
   justify-content: center;
+  text-align: center;
 }
